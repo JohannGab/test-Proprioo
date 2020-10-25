@@ -33,10 +33,15 @@ const CustomerSearch = () => {
             listName: list,
             value
         })
+        if (value === '') {
+            setDisplay(defaultState[0]);
+            setDisplaySearch(defaultStateSearch)
+        } else {
         const searchList = Object.values(res[0].search)
             setDisplay(res[0]);
             setDisplaySearch(searchList)
             console.log(res[0], searchList);
+        }
         }catch(err) {
             return null;
         }
