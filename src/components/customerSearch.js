@@ -36,8 +36,9 @@ const CustomerSearch = () => {
         const searchList = Object.values(res[0].search)
             setDisplay(res[0]);
             setDisplaySearch(searchList)
+            console.log(res[0], searchList);
         }catch(err) {
-            return window.location.reload();
+            return null;
         }
     }
 
